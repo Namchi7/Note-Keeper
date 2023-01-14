@@ -1,0 +1,193 @@
+.closedForm {
+    display: none;
+}
+
+.createNoteContainer {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 16;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.darkBG {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 17;
+    background-color: black;
+    opacity: 0.9; /*0.85*/
+    animation: darken 500ms ease-in-out;
+}
+
+@keyframes darken {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+.createNote {
+    position: fixed;
+    z-index: 18;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    width: 45vw;
+    background-color: #84BEDF;
+    border-radius: 15px;
+    overflow: hidden;
+    scale: 0;
+    animation: scaleUp 500ms 500ms ease-in-out forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 100%;
+    }
+}
+
+.createNoteHead {
+    display: flex;
+    height: 12%;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #66AB5B;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.headText {
+    font-family: roboto;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: rgb(213, 213, 213);
+}
+
+.closeIcon {
+    height: 20px;
+}
+
+.closeIcon:hover {
+    cursor: pointer;
+}
+
+.formDetails {
+    height: 80%;
+    display: flex;
+    gap: 2%;
+    flex-direction: column;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 4%;
+}
+
+.titleFields {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    width: 100%;
+    height: 9%;
+    margin-bottom: 2%;
+}
+
+.bodyFields {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    width: 100%;
+    height: 85%
+}
+
+.formLabels {
+    flex-basis: 15%;
+    text-align: left;
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #474646;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    padding: 5px 0;
+}
+
+.titleInput {
+    flex-basis: 80%;
+    box-sizing: border-box;
+    background-color: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.bodyInput {
+    flex-basis: 80%;
+    box-sizing: border-box;
+    background-color: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    padding: 7px 10px;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.addNoteBtn {
+    color: rgb(213, 213, 213);
+    height: 3rem;
+    width: 150px;
+    background-color: #66AB5B;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.addNoteBtn:hover {
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid rgb(213, 213, 213);
+    font-weight: 530;
+}
+
+@media screen and (max-width: 1000px) {
+    .createNote {
+        width: 55vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .createNote {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .createNoteHead {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 8%;
+    }
+}

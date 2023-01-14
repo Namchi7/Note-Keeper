@@ -1,0 +1,22 @@
+.addButtonBG {
+    position: fixed;
+    display: flex;
+    padding: 0;
+    right: 12.5vw;
+    bottom: 12vh;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: #8E3D3D;
+    align-items: center;
+    justify-content: center;
+}
+
+.addButtonBG:hover {
+    cursor: pointer;
+}
+
+.addIcon {
+    height: 40px;
+    width: 40px;
+}
